@@ -1,0 +1,18 @@
+# Mac
+.DS_Store
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+
+# Maven
+log/
+target/
+
+# Selenium
+*.log
+
+# Other
+output/
+*.zip
