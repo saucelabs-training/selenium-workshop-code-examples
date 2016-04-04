@@ -31,10 +31,6 @@ public class Base {
         find(locator).sendKeys(inputText);
     }
 
-    public void submit(By locator) {
-        find(locator).submit();
-    }
-
     public Boolean isDisplayed(By locator) {
         try {
             return find(locator).isDisplayed();
@@ -43,10 +39,9 @@ public class Base {
         }
     }
 
-    public Boolean waitForIsDisplayed(By locator, Integer... timeout) {
+    public Boolean isDisplayed(By locator, int maxWaitTime) {
         try {
-            waitFor(ExpectedConditions.visibilityOfElementLocated(locator),
-                    (timeout.length > 0 ? timeout[0] : null));
+            waitFor(ExpectedConditions.visibilityOfElementLocated(locator), maxWaitTime);
         } catch (org.openqa.selenium.TimeoutException exception) {
             return false;
         }
