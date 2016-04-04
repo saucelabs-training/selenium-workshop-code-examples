@@ -5,7 +5,6 @@ import org.junit.rules.ExternalResource;
 import org.junit.rules.TestRule;
 import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
-import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -13,10 +12,9 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.URL;
 import com.saucelabs.saucerest.SauceREST;
-import net.sf.randomjunit.RandomTestRunner;
+import static tests.Config.*;
 
-@RunWith(RandomTestRunner.class)
-public class Base implements Config {
+public class Base {
 
     protected WebDriver driver;
     private String testName;
@@ -44,7 +42,7 @@ public class Base implements Config {
                     driver = new FirefoxDriver();
                 } else if (browser.equals("chrome")) {
                     System.setProperty("webdriver.chrome.driver",
-                            System.getProperty("user.dir") + "/vendor/chromedriver");
+                            System.getProperty("user.dir") + "/vendor/chromedriver_mac32");
                     driver = new ChromeDriver();
                 }
             }

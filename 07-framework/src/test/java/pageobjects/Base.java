@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import tests.Config;
+import static tests.Config.*;
 
-public class Base implements Config {
+public class Base {
 
     private WebDriver driver;
 
@@ -36,10 +36,6 @@ public class Base implements Config {
         find(locator).sendKeys(inputText);
     }
 
-    public void submit(By locator) {
-        find(locator).submit();
-    }
-
     public Boolean isDisplayed(By locator) {
         try {
             return find(locator).isDisplayed();
@@ -48,10 +44,9 @@ public class Base implements Config {
         }
     }
 
-    public Boolean waitForIsDisplayed(By locator, Integer... timeout) {
+    public Boolean isDisplayed(By locator, int maxWaitTime) {
         try {
-            waitFor(ExpectedConditions.visibilityOfElementLocated(locator),
-                    (timeout.length > 0 ? timeout[0] : null));
+            waitFor(ExpectedConditions.visibilityOfElementLocated(locator), maxWaitTime);
         } catch (org.openqa.selenium.TimeoutException exception) {
             return false;
         }
