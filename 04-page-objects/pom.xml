@@ -35,7 +35,7 @@
           <snapshots>
               <enabled>false</enabled>
           </snapshots>
-          <url>file://${project.basedir}/lib</url>
+          <url>file://${project.basedir}/../lib</url>
       </repository>
   </repositories>
 </project>
