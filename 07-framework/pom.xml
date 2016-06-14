@@ -34,6 +34,18 @@
 
     <repositories>
         <repository>
+            <id>lib</id>
+            <name>lib</name>
+            <releases>
+                <enabled>true</enabled>
+                <checksumPolicy>ignore</checksumPolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <url>file://${project.basedir}/lib</url>
+        </repository>
+        <repository>
             <id>saucelabs-repository</id>
             <url>https://repository-saucelabs.forge.cloudbees.com/release</url>
             <releases>

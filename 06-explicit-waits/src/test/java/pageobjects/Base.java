@@ -53,5 +53,4 @@ public class Base {
         WebDriverWait wait = new WebDriverWait(driver, timeout);
         wait.until(condition);
     }
-
 }
