@@ -1,0 +1,47 @@
+<project>
+  <parent>
+    <artifactId>maven-plugin-parent</artifactId>
+    <groupId>org.apache.maven.plugins</groupId>
+    <version>2.0</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>maven-site-plugin</artifactId>
+  <packaging>maven-plugin</packaging>
+  <name>Maven Site plugin</name>
+  <version>2.0-beta-4</version>
+  <developers>
+    <developer>
+      <id>vsiveton</id>
+      <name>Vincent Siveton</name>
+      <email>vsiveton@apache.org</email>
+      <organization>Apache Software Foundation</organization>
+      <roles>
+        <role>Java Developer</role>
+      </roles>
+      <timezone>-5</timezone>
+    </developer>
+  </developers>
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-project</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.plexus</groupId>
+      <artifactId>plexus-site-renderer</artifactId>
+      <version>1.0-alpha-3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.reporting</groupId>
+      <artifactId>maven-reporting-api</artifactId>
+      <version>2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.plexus</groupId>
+      <artifactId>plexus-utils</artifactId>
+    </dependency>
+  </dependencies>
+  <distributionManagement>
+    <status>deployed</status>
+  </distributionManagement>
+</project>
