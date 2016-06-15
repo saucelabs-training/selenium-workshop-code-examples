@@ -43,7 +43,9 @@
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
-            <url>file://${project.basedir}/../lib</url>
+            <url>file://${project.basedir}\..\lib</url>
+            <!-- if using a non-Windows system use this line instead -->
+            <!--<url>file://${project.basedir}/../lib</url>-->
         </repository>
         <repository>
             <id>saucelabs-repository</id>
