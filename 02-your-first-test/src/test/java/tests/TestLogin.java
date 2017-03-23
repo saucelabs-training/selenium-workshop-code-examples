@@ -13,6 +13,12 @@ public class TestLogin {
 
     @Before
     public void setUp() {
+
+        // Windows
+        //System.setProperty("webdriver.gecko.driver", "C:\\tools\\selenium\\geckodriver.exe");
+
+        // Mac
+        //System.setProperty("webdriver.gecko.driver", "/usr/local/bin/geckodriver");
         driver = new FirefoxDriver();
     }
 

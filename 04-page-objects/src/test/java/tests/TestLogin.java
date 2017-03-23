@@ -1,12 +1,13 @@
 package tests;
 
-import org.junit.Test;
-import org.junit.Before;
 import org.junit.After;
-import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import pageobjects.Login;
+
+import static org.junit.Assert.assertTrue;
 
 public class TestLogin {
 
@@ -15,7 +16,7 @@ public class TestLogin {
 
     @Before
     public void setUp() {
-        driver = new FirefoxDriver();
+        driver = (WebDriver) new ChromeDriver();
         login = new Login(driver);
     }
 

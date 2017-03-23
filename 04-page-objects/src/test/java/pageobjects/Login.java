@@ -2,6 +2,9 @@ package pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import static org.junit.Assert.assertTrue;
 
 public class Login {
@@ -28,10 +31,19 @@ public class Login {
     }
 
     public Boolean successMessagePresent() {
+        wait(successMessageLocator);
         return driver.findElement(successMessageLocator).isDisplayed();
     }
 
     public Boolean failureMessagePresent() {
+        wait(failureMessageLocator);
         return driver.findElement(failureMessageLocator).isDisplayed();
     }
+
+    public void wait(By locator){
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+       // return element;
+    }
+
 }
