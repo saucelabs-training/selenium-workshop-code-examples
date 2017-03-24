@@ -1,43 +1,43 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.seleniumguidebook.examples</groupId>
-  <artifactId>seleniumguidebook-examples</artifactId>
-  <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <name>seleniumguidebook-examples</name>
-  <url>http://maven.apache.org</url>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.seleniumguidebook.examples</groupId>
+    <artifactId>seleniumguidebook-example-06</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>seleniumguidebook-example-06</name>
+    <url>http://maven.apache.org</url>
 
-  <dependencies>
+    <dependencies>
 
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
 
-    <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-java</artifactId>
-        <version>2.53.0</version>
-    </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.3.1</version>
+        </dependency>
 
-  </dependencies>
-  <repositories>
-      <repository>
-          <id>lib</id>
-          <name>lib</name>
-          <releases>
-              <enabled>true</enabled>
-              <checksumPolicy>ignore</checksumPolicy>
-          </releases>
-          <snapshots>
-              <enabled>false</enabled>
-          </snapshots>
-          <url>file://${project.basedir}\..\lib</url>
-          <!-- if using a non-Windows system use this line instead -->
-          <!--<url>file://${project.basedir}/../lib</url>-->
-      </repository>
-  </repositories>
+    </dependencies>
+    <repositories>
+        <repository>
+            <id>lib</id>
+            <name>lib</name>
+            <releases>
+                <enabled>true</enabled>
+                <checksumPolicy>ignore</checksumPolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <url>file://${project.basedir}\..\lib</url>
+            <!-- if using a non-Windows system use this line instead -->
+            <!--<url>file://${project.basedir}/../lib</url>-->
+        </repository>
+    </repositories>
 </project>
