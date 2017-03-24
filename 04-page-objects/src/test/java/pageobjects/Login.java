@@ -31,12 +31,11 @@ public class Login {
     }
 
     public Boolean successMessagePresent() {
-        wait(successMessageLocator);
+        //wait(successMessageLocator);
         return driver.findElement(successMessageLocator).isDisplayed();
     }
 
     public Boolean failureMessagePresent() {
-        wait(failureMessageLocator);
         return driver.findElement(failureMessageLocator).isDisplayed();
     }
 

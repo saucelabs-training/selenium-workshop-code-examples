@@ -1,11 +1,11 @@
 package tests;
 
-import org.junit.Test;
-import org.junit.Before;
 import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TestLogin {
 
@@ -15,11 +15,11 @@ public class TestLogin {
     public void setUp() {
 
         // Windows
-        //System.setProperty("webdriver.gecko.driver", "C:\\tools\\selenium\\geckodriver.exe");
-
+        //System.setProperty("webdriver.chrome.driver", "C:\\tools\\selenium\\chromedriver.exe");
         // Mac
-        //System.setProperty("webdriver.gecko.driver", "/usr/local/bin/geckodriver");
-        driver = new FirefoxDriver();
+        //System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+
+        driver = new ChromeDriver();
     }
 
     @Test
