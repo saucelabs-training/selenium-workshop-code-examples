@@ -10,14 +10,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class TestLogin {
 
     private WebDriver driver;
-
     @Before
     public void setUp() {
 
         // Windows
-        //System.setProperty("webdriver.chrome.driver", "C:\\tools\\selenium\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "../driver/chromedriver.exe");
         // Mac
-        //System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+        //System.setProperty("webdriver.chrome.driver", "../driver/chromedriver");
 
         driver = new ChromeDriver();
     }

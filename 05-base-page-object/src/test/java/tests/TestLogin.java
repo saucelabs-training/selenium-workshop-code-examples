@@ -17,6 +17,11 @@ public class TestLogin {
 
     @Before
     public void setUp() {
+        // Windows
+        //System.setProperty("webdriver.chrome.driver", "../driver/chromedriver.exe");
+        // Mac
+        //System.setProperty("webdriver.chrome.driver", "../driver/chromedriver");
+
         driver = new ChromeDriver();
         login = new Login(driver);
     }
