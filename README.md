@@ -1,24 +1,30 @@
 # For attendees
 
-If you have the selenium browser bindings in you path use these for the system properties
+Run either the `windows_insall.bat` by double-clicking or the `mac_install.sh` by opening up the folder in a terminal window and typeing `./mac_install.sh`.
 
-Windows
-System.setProperty("webdriver.chrome.driver", "C:\\tools\\selenium\\chromedriver.exe");
+### Windows
 
-Mac
-System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+`System.setProperty("webdriver.chrome.driver", "../driver/chromedriver.exe");`
 
-If you are not sure use these
+### Mac
 
-Windows
-System.setProperty("webdriver.chrome.driver", "../driver/chromedriver.exe");
+`System.setProperty("webdriver.chrome.driver", "../driver/chromedriver");`
 
-Mac
-System.setProperty("webdriver.chrome.driver", "../driver/chromedriver");
+## IF THE INSTALL SCRIPT WORKED
 
+`This is the java code that will need to be in the top of files for the workshop.
+### Windows
 
-# Workshop Setup
+`System.setProperty("webdriver.chrome.driver", "C:\\tools\\selenium\\chromedriver.exe");`
 
-from the 7 folder run this command
+### Mac
 
-mvn dependency:copy-dependencies -Dmdep.useRepositoryLayout=true -DoutputDirectory=../lib
+`System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");`
+
+---
+
+# Instructor Workshop Setup
+
+from the 07 folder run this command
+
+`mvn dependency:copy-dependencies -Dmdep.useRepositoryLayout=true -DoutputDirectory=../lib`
