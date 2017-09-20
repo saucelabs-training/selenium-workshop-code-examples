@@ -2,9 +2,11 @@ package pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class Login {
@@ -18,9 +20,9 @@ public class Login {
     By failureMessageLocator = By.cssSelector(".flash.error");
 
     public Login(WebDriver driver) {
-        this.driver = driver;
+        driver = driver;
         driver.get("http://the-internet.herokuapp.com/login");
-        assertTrue("The login form is not present",
+        assertEquals("The login form is not present", true,
                 driver.findElement(loginFormLocator).isDisplayed());
     }
 

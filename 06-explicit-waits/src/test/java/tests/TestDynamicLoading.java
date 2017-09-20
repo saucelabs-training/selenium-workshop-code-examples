@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.After;
 import static org.junit.Assert.*;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import pageobjects.DynamicLoading;
 
 public class TestDynamicLoading {
@@ -15,7 +15,12 @@ public class TestDynamicLoading {
 
     @Before
     public void setUp() {
-        driver = new FirefoxDriver();
+        // Windows
+        //System.setProperty("webdriver.chrome.driver", "../driver/chromedriver.exe");
+        // Mac
+        //System.setProperty("webdriver.chrome.driver", "../driver/chromedriver");
+
+        driver = new ChromeDriver();
         dynamicLoading = new DynamicLoading(driver);
     }
 

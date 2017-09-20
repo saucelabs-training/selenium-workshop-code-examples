@@ -4,7 +4,7 @@
     <groupId>com.seleniumguidebook.examples</groupId>
     <artifactId>seleniumguidebook-example-06</artifactId>
     <packaging>jar</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.2</version>
     <name>seleniumguidebook-example-06</name>
     <url>http://maven.apache.org</url>
 
@@ -20,7 +20,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>3.3.1</version>
+            <version>3.5.3</version>
         </dependency>
 
     </dependencies>
